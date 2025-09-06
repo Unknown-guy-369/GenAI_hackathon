@@ -1,0 +1,1 @@
+## This folder is used for to describe and current process of project and Hackaton plans

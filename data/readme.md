@@ -1,0 +1,1 @@
+## Contains sample data or training data for AI models
