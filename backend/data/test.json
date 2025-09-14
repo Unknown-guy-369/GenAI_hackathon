@@ -1,0 +1,38 @@
+[
+    {
+        "type": "text",
+        "content": "Vijay is the current CM"
+    },
+    {
+        "type": "text",
+        "content": "Vijay is the current] CM"
+    },
+    {
+        "type": "text",
+        "content": "hello"
+    },
+    {
+        "type": "text",
+        "content": "\ud83d\udcce Uploaded file: Abishek image.jpg"
+    },
+    {
+        "type": "text",
+        "content": "\ud83c\udfa4 Voice message: [Audio Clip](blob:http://localhost:5173/71b1c66d-fcb6-4735-8dbe-7facaa399a18)"
+    },
+    {
+        "type": "text",
+        "content": "bsmrkh n"
+    },
+    {
+        "type": "text",
+        "content": "\ud83d\udcce Uploaded file: Course1Module04Assignment.pdf"
+    },
+    {
+        "type": "text",
+        "content": "hi"
+    },
+    {
+        "type": "text",
+        "content": "\ud83d\udcce Uploaded file: GenAI problem statement analysis.pdf"
+    }
+]
