@@ -34,4 +34,33 @@ Built for the **Google Hackathon**, this project leverages **Google Vertex AI**,
 
 ---
 
+# Current Status
+
+### Model frontend was created
+![alt text](image.png)
+### Now Can send input from frontend to backend and get response also 
+#### Now only it handles text input other input files,images it cant recognise
+#### Soon the feature will be added
+
+# Instruction to use Git branch 
+
+#### It was pushed on seprate branch feature/input
+
+### WORK ON SPECIFIC BRANCH
+
+#### For first time 
+```bash
+git clone https://github.com/Unknown-guy-369/GenAI_hackathon.git
+
+```
+
+#### Already cloned
+```bash
+git fetch orgin
+
+git branch
+
+git switch feature/input
+```
+
 
