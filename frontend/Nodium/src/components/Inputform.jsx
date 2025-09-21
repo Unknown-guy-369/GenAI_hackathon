@@ -70,10 +70,13 @@ const handleSend = async (customContent) => {
       const aiResponse = {
         id: messages.length + 2,
         type: "assistant",
-        content: `✅ Saved as ${response.data.input_type}: ${response.data.content}`,
+        content: `${response.data.summarize}`,
         timestamp: new Date(),
       };
-
+      console.log("Backend response:", response.data.results);
+      console.log("Result", response.data.results);
+      
+      console.log("Summary:", response.data.summarize);
       setMessages((prev) => [...prev, aiResponse]);
     } catch (error) {
       console.error("Error sending message:", error);

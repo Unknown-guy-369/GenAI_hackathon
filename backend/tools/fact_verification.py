@@ -3,6 +3,7 @@ import requests  # For making API calls
 import spacy
 from dotenv import load_dotenv
 import os
+from tools.summarization import fetch_page_text, summarize_with_gemini
 
 load_dotenv()  # Load environment variables from .env file
 
@@ -135,6 +136,25 @@ if __name__ == "__main__":
     evidence_snippets = retrieve_evidence_google_pse(search_query, GOOGLE_API_KEY, GOOGLE_PSE_ID)
 
     if evidence_snippets:
+        summarized_evidence = []
+        for ev in evidence_snippets:
+            page_text = fetch_page_text(ev["url"])
+            if page_text:
+                summary = summarize_with_gemini(page_text)
+            else:
+                summary = "Could not fetch content."
+            summarized_evidence.append({
+                "title": ev["title"],
+                "url": ev["url"],
+                "summary": summary
+            })
+
+        print("\n--- Summarized Evidence ---")
+        for ev in summarized_evidence:
+            print(f"Title: {ev['title']}")
+            print(f"URL: {ev['url']}")
+            print(f"Summary: {ev['summary']}\n")
+
         verification_results = verify_claim(user_claim, evidence_snippets)
         print(verification_results)
         print(evidence_snippets)
